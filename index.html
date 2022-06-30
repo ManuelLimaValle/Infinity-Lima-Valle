@@ -12,163 +12,219 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </head>
-<body id="todo">
-     <header>
-         <nav class="container row h-20">
-             <div class="h-5 d-inline-block col-2">
-                 <img  class="nav__logo-imagen img-fluid" src="./img/iconos/Logo.png" alt="logoDeInfinity">
-             </div>
-             <div class="col-2 ">
-                 <img  class="img-fluid" src="./img/iconos/hamburger.png" alt="menu-hamburg">
-             </div>
-             <ul class="col-4">
-                <li class="d-inline">
-                    <a  href="#">Inicio</a>
-                </li>
-                <li class="d-inline">
-                    <a href="./main/juegos.html">Juegos</a>
-                </li>
-                <li class="d-inline">
-                    <a href="./main/ofertas.html">Ofertas</a>
-                </li>
-                <li class="d-inline">
-                    <a href="./main/noticias.html">Noticias</a>
-                </li>
-                <li class="d-inline">
-                    <a href="./main/contactos.html">Contactos</a>
-                </li>
-             </ul>
-             <div class="col-2">
-                <input type="text" placeholder="Buscar">
-             </div>
-             <img class=" col-2 h-15 d-inline-block img-fluid" src="./img/iconos/lupa.png" alt="lupa">
-        </nav>
+<body class="container-fluid">
+     <header class="row border-bottom border-success">
+          <nav class="navbar navbar-expand-lg bg-light">
+               <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="./img/iconos/Logo.png" alt="" width="150" height="40">
+                  </a>
+                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                     <li class="nav-item">
+                       <a class="nav-link" href="./index.html">Menu</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link" href="./main/juegos.html">Juegos</a>
+                     </li>
+                     <li class="nav-item">
+                      <a class="nav-link" href="./main/ofertas.html">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./main/noticias.html">Noticias</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./main/contactos.html">Contactos</a>
+                    </li>
+                   </ul>
+                   <form class="d-flex" role="search">
+                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                     <button class="btn btn-outline-success" type="submit">Buscar</button>
+                   </form>
+                 </div>
+               </div>
+             </nav>
     </header>
-    <main class="main">
-         <section class="contenedor-uno contenedor-uno--imagen--tamanio">
-               <div class="contenedor-uno__principal">
-                   <img class="contenedor-uno__principal-imagen" src="./img/portadas/titulo.png" alt="titulo">
-                   <h2 class="container-uno__principal-titulo">Lorem ipsum dolor sit.</h2>
-                   <p class="contenedor-uno__principal-parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis blanditiis optio laudantium fuga eos illum.</p>
-                   <a class="contenedor-uno__principal-enlace" href="#">Lorem, ipsum.</a>
-               </div>
-         </section>
-         <section class="contenedor-dos">
-               <div class="contenedor-dos__juegos">
-                     <img class="contenedor-dos__imagen" src="./img/portadas/assassins-creed.jpg" alt="asssassins">
-                     <img class="contenedor-dos__imagen" src="./img/portadas/red-dead-redeption.jpg" alt="red">
-                     <img class="contenedor-dos__imagen" src="./img/portadas/resident-evil.jpg" alt="resident">
-               </div>
-         </section>
-         <section class="contenedor-tres">
-                <h2 class="contenedor-tres__titulo">Todas las consolas</h2>
-                <div class="contenedor-tres__marcas">
-                    <img class="contenedor-tres__marcas-imagen" src="./img/iconos/playstation_icon-icons.com_50067.png" alt="playstation">
-                    <img class="contenedor-tres__marcas-imagen" src="./img/iconos/xbox.png" alt="xbox">
-                    <img class="contenedor-tres__marcas-imagen" src="./img/iconos/nintendo_switch_icon_136357.png" alt="nintendo">
-                    <img class="contenedor-tres__marcas-imagen" src="./img/iconos/windows-10_icon-icons.com_66166.png" alt="windows">
+    <main class="row d-grid gap-5">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide col-12" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                  <img src="./img/portadas/elden-ring-.png" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block bg-dark text-light">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                  </div>
                 </div>
-         </section>
-         <section class="contenedor-cuatro">
-               <div class="contenedor-cuatro__game-soccer">
-                    <h2 class="contenedor-cuatro__game-titulo">Lorem ipsum dolor sit amet.</h2>
-                    <img class="contenedor-cuatro__game-imagen" src="./img/portadas/fifa.jpeg" alt="fifa">
+                <div class="carousel-item" data-bs-interval="2000">
+                  <img src="./img/portadas/avants.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block bg-dark text-light">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="./img/juegos/wwe.jpg" class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block bg-dark text-light">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          <section class="container">
+              <div class="row d-flex justify-content-evenly">
+                 <div class="col-12 col-lg-3 col-md-3 card">
+                    <img src="./img/portadas/assassins-creed.jpg" class="card-img-top" alt="assand">
+                    <div class="card-body">
+                      <h2>Lorem, ipsum.</h2>
+                       <p class="card-text text-bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, commodi.</p>
+                    </div>
+                 </div>
+                 <div class="col-12 col-lg-3 col-md-3  card">
+                    <img src="./img/portadas/red-dead-redeption.jpg" class="card-img-top" alt="assand">
+                    <div class="card-body">
+                      <h2>Lorem, ipsum.</h2>
+                      <p class="card-text text-bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, commodi.</p>
+                    </div>
+                 </div>
+                 <div class="col-12 col-lg-3 col-md-3  card">
+                    <img src="./img/portadas/resident-evil.jpg" class="card-img-top" alt="assand">
+                    <div class="card-body">
+                      <h2>Lorem, ipsum.</h2>
+                      <p class="card-text text-bg-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, commodi.</p>
+                    </div>
                </div>
-               <div class="contenedor-cuatro__game-terror">
-                    <h2 class="contenedor-cuatro__game-titulo">Lorem ipsum dolor sit amet.</h2>
-                    <img class="contenedor-cuatro__game-imagen" src="./img/portadas/village.jpg" alt="alien">
-               </div>    
-               <div class="contenedor-cuatro__game-lucha">
-                    <img class="contenedor-cuatro__game-imagen" src="./img/portadas/Mortal Kombat 11.jpg" alt="mk11">
-                    <h2 class="contenedor-cuatro__game-titulo">Lorem ipsum dolor sit amet.</h2>
-               </div>
+              </div>
          </section>
-         <section class="contenedor-cinco">
-               <h2 class="contenedor-cinco__texto contenedor-cinco__texto--green">MAS DE 100 JUEGOS</h2>
-               <div class="contenedor-cinco__varios">
-                   <div class="contenedor-cinco__varios-juegos">
-                        <img class="contenedor-cinco__varios-imagen" src="./img/juegos/assassins-creed-syndicate.jpg" alt="assasins">
-                        <p class="contenedor-cinco__varios-texto">Lorem ipsum dolor sit amet.</p>
-                   </div>
-                   <div class="contenedor-cinco__varios-juegos">
-                        <img class="contenedor-cinco__varios-imagen" src="./img/juegos/batman.webp" alt="batman">
-                        <p class="contenedor-cinco__varios-texto">Lorem ipsum dolor sit amet.</p>
-                   </div>
-                   <div class="contenedor-cinco__varios-juegos">
-                        <img class="contenedor-cinco__varios-imagen" src="./img/juegos/CodWW2.webp" alt="codww2">
-                        <p class="contenedor-cinco__varios-texto">Lorem ipsum dolor sit amet.</p>
-                   </div>
-                   <div class="contenedor-cinco__varios-juegos">
-                        <img class="contenedor-cinco__varios-imagen" src="./img/juegos/far-cry.png" alt="assasins">
-                        <p class="contenedor-cinco__varios-texto">Lorem ipsum dolor sit amet.</p>
-                   </div>
-                   <div class="contenedor-cinco__varios-juegos">
-                        <img class="contenedor-cinco__varios-imagen" src="./img/juegos/gta-trilogy.jpg" alt="gta-trilogy">
-                        <p class="contenedor-cinco__varios-texto">Lorem ipsum dolor sit amet.</p>
-                   </div>
-                   <div class="contenedor-cinco__varios-juegos">
-                        <img class="contenedor-cinco__varios-imagen" src="./img/juegos/gta5.webp" alt="assasins">
-                        <p class="contenedor-cinco__varios-texto">Lorem ipsum dolor sit amet.</p>
-                   </div>
-                   <div class="contenedor-cinco__varios-juegos">
-                        <img class="contenedor-cinco__varios-imagen" src="./img/juegos/mortal-kombat-x.webp" alt="mkx">
-                        <p class="contenedor-cinco__varios-texto">Lorem ipsum dolor sit amet.</p>
-                   </div>
-                   <div class="contenedor-cinco__varios-juegos">
-                        <img class="contenedor-cinco__varios-imagen" src="./img/juegos/nba-2k22.webp" alt="nba22">
-                        <p class="contenedor-cinco__varios-texto">Lorem ipsum dolor sit amet.</p>
-                   </div>
-                   <div class="contenedor-cinco__varios-juegos">
-                        <img class="contenedor-cinco__varios-imagen" src="./img/juegos/spider-man.webp" alt="spider">
-                        <p class="contenedor-cinco__varios-texto">Lorem ipsum dolor sit amet.</p>
-                   </div>
-                   <div class="contenedor-cinco__varios-juegos">
-                        <img class="contenedor-cinco__varios-imagen" src="./img/juegos/star-wars.webp" alt="star-wars">
-                        <p class="contenedor-cinco__varios-texto">Lorem ipsum dolor sit amet.</p>
-                   </div>
-                   
-               </div>
-         </section>
+         <section class="container">
+          <div class="row">
+              <h2 class="text-center">Todas las consolas</h2>
+              <div class="row d-flex justify-content-evenly">
+                <a class="col-3 col-lg-1" href="#">
+                  <img src="./img/iconos/playstation_icon-icons.com_50067.png" class="img-fluid" alt="playstation">
+                </a>
+                <a class="col-3 col-lg-1" href="#">
+                  <img src="./img/iconos/xbox.png" class="img-fluid" alt="playstation">
+                </a>
+                <a class="col-3 col-lg-1" href="#">
+                  <img src="./img/iconos/nintendo_switch_icon_136357.png" class="img-fluid" alt="playstation">
+                </a>
+                <a class="col-3 col-lg-1" href="#">
+                  <img src="./img/iconos/windows-10_icon-icons.com_66166.png" class="img-fluid" alt="playstation">
+                </a>
+              </div>
+          </div> 
+     </section>
+     <section class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                   <h2>Lorem ipsum dolor sit amet.</h2>
+                   <img src="./img/portadas/fifa.jpeg" class="img-fluid"  alt="fifa">
+                </div>
+                <div class="col-12 col-lg-2">
+                  <h2>Lorem, ipsum</h2>
+                  <img src="./img/portadas/village.jpg" class="img-fluid" alt="alien">
+                </div>
+                <div class="col-12 col-lg-12">
+                  <img src="./img/portadas/Mortal Kombat 11.jpg" class="img-fluid"  alt="fifa">
+                  <h2>Lorem ipsum dolor sit amet.</h2>
+             </div>
+      </section>
+      <section class="row col-12 col-lg-12 justify-content-center">
+            <div>
+                <h2 class="text-center">Mas de 100 juegos</h2>
+            </div>
+            <div class="col-4 col-lg-2">
+               <img src="./img/juegos/far-cry.png" class="img-fluid" alt="">
+               <p>Lorem ipsum dolor sit</p>
+            </div>
+            <div class="col-4 col-lg-2">
+                  <img src="./img/juegos/far-cry.png" class="img-fluid" alt="">
+                  <p>Lorem ipsum dolor sit</p>
+           </div>
+           <div class="col-4 col-lg-2">
+                  <img src="./img/juegos/far-cry.png" class="img-fluid" alt="">
+                  <p>Lorem ipsum dolor sit</p>
+           </div>
+           <div class="col-4 col-lg-2">
+                <img src="./img/juegos/far-cry.png" class="img-fluid" alt="">
+                <p>Lorem ipsum dolor sit</p>
+           </div>
+           <div class="col-4 col-lg-2">
+                 <img src="./img/juegos/far-cry.png" class="img-fluid" alt="">
+                 <p>Lorem ipsum dolor sit</p>
+           </div>
+           <div class="col-4 col-lg-2">
+                <img src="./img/juegos/far-cry.png" class="img-fluid" alt="">
+                <p>Lorem ipsum dolor sit</p>
+           </div>
+           <div class="col-4 col-lg-2">
+                <img src="./img/juegos/far-cry.png" class="img-fluid" alt="">
+                <p>Lorem ipsum dolor sit</p>
+           </div>
+           <div class="col-4 col-lg-2">
+                <img src="./img/juegos/far-cry.png" class="img-fluid" alt="">
+                <p>Lorem ipsum dolor sit</p>
+           </div>
+           <div class="col-4 col-lg-2">
+                <img src="./img/juegos/far-cry.png" class="img-fluid" alt="">
+                <p>Lorem ipsum dolor sit</p>
+           </div>
+
+      </section>
     </main>
-    <footer class="footer">
-          <div class="contact">
-                <h2 class="contact__titulo">Redes Sociales</h2>
-                <div class="contact__app">
-                    <a class="contact__link" href="#">
-                         <img class="contact__link-imagen" src="./img/iconos/facebook.png" alt="facebook">
-                    </a>
-                    <a class="contact__link" href="#">
-                         <img class="contact__link-imagen" src="./img/iconos/instagram.png" alt="instagram">
-                    </a>
-                    <a class="contact__link" href="#">
-                         <img class="contact__link-imagen" src="./img/iconos/twitter.png" alt="twitter">
-                    </a>
-                    <a class="contact__link" href="#">
-                         <img class="contact__link-imagen" src="./img/iconos/youtube.png" alt="youtube">
-                    </a>
-                </div>
-          </div>
-          <div class="nosotros">
-               <h2 class="nosotros__titulo">acerca de nosotros</h2>
-               <p class="nosotros__parrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate tempore ad corrupti velit consequuntur doloremque aut sed consectetur ipsa molestiae.</p>
-          </div>
-          <div class="number">
-               <div class="number__iconos">
-                    <img class="number__iconos-imagen" src="./img/iconos/gmail.png" alt="gmail">
-                    <p class="number__iconos-texto">Lorem, ipsum.</p>
+    <footer class="row bg-secondary border-top border-success">
+         <div class="col-lg-6">
+             <h4 class="col-12 text-center">Redes sociales</h4>
+             <div class="d-flex flex-row justify-content-evenly">
+                <img class="col-2" src="./img/iconos/facebook.png" class="img-fluid" alt="facebook">
+                <img class="col-2" src="./img/iconos/instagram.png" class="img-fluid" alt="twitter">
+                <img class="col-2" src="./img/iconos/twitter.png" class="img-fluid" alt="twitter">
+                <img class="col-2" src="./img/iconos/youtube.png" class="img-fluid" alt="twitter">
+             </div>
+         </div>
+         <div class="col-lg-6 text-center">
+              <h4>Lorem, ipsum dolor.</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex illum alias velit ducimus quo, provident minus illo aliquid ea ipsum enim, blanditiis culpa sit maiores consequatur sunt vitae id! Rerum?</p>
+         </div>
+         <div class=" col-lg-6 d-flex flex-row justify-content-evenly">
+               <div class="col-2">
+                  <img src="./img/iconos/whatsapp.png" class="img-fluid" alt="what">
+                  <p>Lorem ipsum dolor sit.</p>
                </div>
-               <div class="number__iconos">
-                    <img class="number__iconos-imagen" src="./img/iconos/whatsapp.png" alt="whatsapp">
-                    <p class="number__iconos-texto">000-3232-9999</p>
+               <div class="col-2">
+                  <img src="./img/iconos/gmail.png" class="img-fluid" alt="gmail">
+                  <p>Lorem ipsum dolor sit.</p>
                </div>
-               <div class="number__iconos">
-                    <img class="number__iconos-imagen" src="./img/iconos/google-map.png" alt="map">
-                    <p class="number__iconos-texto">los cardales</p>
+               <div class="col-2">
+                  <img src="./img/iconos/google-map.png" class="img-fluid" alt="map">
+                  <p>Lorem ipsum dolor sit.</p>
                </div>
+         </div>
+         <div class="col-lg-6 col-12">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26358.762090247274!2d-59.00365457082109!3d-34.32895991360937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb7be81ba76321%3A0x25b7697792446dd3!2sLos%20Cardales%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1655510048071!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+          <div class="text-center">
+            <h5>INFINITY 2022-2021</h5>
           </div>
-          <iframe class="footer__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26358.762090247274!2d-59.00365457082109!3d-34.32895991360937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb7be81ba76321%3A0x25b7697792446dd3!2sLos%20Cardales%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1655510048071!5m2!1ses-419!2sar"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          <h3 class="footer__pie">INFINITY 2021-2022</h3>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>
