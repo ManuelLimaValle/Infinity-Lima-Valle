@@ -1,135 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inifinity</title>
-    <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
-    <link
-    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Infinity</title>
+     <link rel="stylesheet" href="../sass/main.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body id="todo">
-    <header class="header header--grey">
-        <nav class="nav">
-             <div class="nav__logo">
-                 <img class="nav__logo-imagen" src="../img/iconos/Logo.png" alt="logoDeInfinity">
-             </div>
-             <div class="nav__menu">
-                <img class="nav__menu-imagen" src="../img/iconos/hamburger.png" alt="menu-hamburg">
-            </div>
-             <ul class="nav__list">
-                <li class="nav__items">
-                    <a class="nav__link" href="../index.html">Inicio</a>
-                </li>
-                <li class="nav__items">
-                    <a class="nav__link" href="../main/juegos.html">Juegos</a>
-                </li>
-                <li class="nav__items">
-                    <a class="nav__link" href="../main/ofertas.html">Ofertas</a>
-                </li>
-                <li class="nav__items">
-                    <a class="nav__link" href="../main/noticias.html">Noticias</a>
-                </li>
-                <li class="nav__items">
-                    <a class="nav__link" href="../main/contactos.html">Contactos</a>
-                </li>
-             </ul>
-             <div class="nav__seach">
-                <input type="text" class="nav__seach-input" placeholder="Buscar">
-                <img class="nav__seach-imagen" src="../img/iconos/lupa.png" alt="lupa">
-             </div>
-        </nav>
-    </header>
-    <main>
-        <div class="contenedor-formulario-fondo">
-            <h2 class="contenedor-formulario-fondo__texto animate__animated animate__rubberBand">Ingrese sus Consultas</h2>
-        </div>
-        <div class="contenedor-formulario">
-            <form class="formulario">
-                <label for="nombre">Nombre:</label>
-                <div >
-                    <input class="formulario__input" type="text" name="nombre" placeholder="Nombre">
-                </div> 
-                <label for="Apellido">Apellido:</label>
-                <div >
-                    <input class="formulario__input" type="text" name="Apellido" placeholder="Ingrese su Apellido">
+     <header class="header">
+          <div class="header__menu">
+               <img class="header__menu-imagen" src="../img/iconos/hamburger.png" alt="menu">
+          </div>
+          <div class="header__logo">
+               <img class="header__logo-imagen" src="../img/iconos/Logo.png" alt="logo">
+          </div>
+          <nav class="header__nav">
+               <ul class="header__nav-lista">
+                    <li class="header__nav-lista-items">
+                         <a class="header__nav-lista-items-links" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="header__nav-lista-items">
+                         <a class="header__nav-lista-items-links" href="../main/juegos.html">Juegos</a>
+                    </li>
+                    <li class="header__nav-lista-items">
+                         <a class="header__nav-lista-items-links" href="../main/ofertas.html">Ofertas</a>
+                    </li>
+                    <li class="header__nav-lista-items">
+                         <a class="header__nav-lista-items-links" href="../main/noticias.html">Noticias</a>
+                    </li>
+                    <li class="header__nav-lista-items">
+                         <a class="header__nav-lista-items-links" href="../main/contactos.html">Contactos</a>
+                    </li>
+               </ul>
+          </nav>
+          <div class="header__buscador">
+               <input class="header__buscador-input" type="text" placeholder="Buscar">
+          </div>
+          <div class="header__lupa">
+               <img  class="header__lupa-imagen" src="../img/iconos/lupa.png" alt="lupa">
+          </div>
+     </header>
+     <main>
+         <div class="contenedor">
+            <img class="contenedor__imagen" src="../img/portadas/avants.jpg" alt="call">
+            <h2 class="contenedor__titulo animate__animated animate__rubberBand">Contactos</h2>
+         </div>
+         <div class="contenedor-formulario">
+            <h2 class="contenedor-formulario__titulo">formulario</h2>
+            <form class="contenedor-formulario__form">
+                <label for="nombre">Ingrese su nombre: </label>
+                <div class="contenedor-formulario__form-texto">
+                    <input class="contenedor-formulario__form-texto-input" type="text" name="nombre" placeholder="Nombre">
                 </div>
-                <label for="Email">Correo Electronico:</label>
-                <div >
-                   <input class="formulario__input" type="email" name="Email" placeholder="email@gmail.com">
+                <label for="apellido">Ingrese su apellido: </label>
+                <div class="contenedor-formulario__form-texto">
+                    <input class="contenedor-formulario__form-texto-input" type="text" name="apellido" placeholder="apellido">
                 </div>
-                <label for="radios">selecciones su consola: </label>    
-                <div name="radios">
-                    <label for="consola1">Playstation</label>
-                    <input id="consola1" type="radio" name="consola" value="ps4">
-                    <label for="consola2">Xbox</label>
-                    <input id="consola2" type="radio" name="consola" value="xbox">
-                    <label for="consola3">Nintendo</label>
-                    <input id="consola3" type="radio" name="consola" value="nintendo">
-                    <label for="consola4">PC</label>
-                    <input id="consola4" type="radio" name="consola" value="pc">
+                <label for="email">ingrese su email: </label>
+                <div class="contenedor-formulario__form-texto">
+                    <input class="contenedor-formulario__form-texto-input" type="email" name="email" placeholder="example@gmail.com">
                 </div>
-                <label for="Pais">Ingrese su Pais: </label>
-                <div>
-                    <select name="Pais">
-                        <option value="AR">Argentina</option>
-                        <option value="BR">Brasil</option>
-                        <option value="CH">Chile</option>
-                        <option value="CL">Colombia</option>
+                <label for="consola">seleccione consola: </label>
+                <div class="contenedor-formulario__form-radio" id="consola">
+                    <div class="contenedor-formulario__form-radio-consola">
+                         <label for="playstation">Playstation</label>
+                         <input type="radio" id="playstation" name="consola">
+                    </div>
+                    <div class="contenedor-formulario__form-radio-consola">
+                         <label for="xbox">Xbox</label>
+                         <input type="radio" id="xbox" name="consola">
+                    </div>
+                    <div class="contenedor-formulario__form-radio-consola">
+                         <label for="nintendo">Nintendo</label>
+                         <input type="radio" id="nintendo" name="consola">
+                    </div>
+                    <div class="contenedor-formulario__form-radio-consola">
+                         <label for="pc">Pc</label>
+                         <input type="radio" id="pc" name="consola">
+                    </div>
+                </div>
+                <label for="pais">seleccione su pais: </label>
+                <div class="contenedor-formulario__form-lista">
+                    <select name="pais">
+                         <option value="argentina">Argentina</option>
+                         <option value="brasil">Brasil</option>
+                         <option value="chile">Chile</option>
                     </select>
                 </div>
-                <label for="campo-texto">Pregunta: </label>
-                <div>
-                    <textarea name="campo-texto">Ingrese Su Pregunta</textarea>
-                </div>  
-                <div>
-                    <input type="submit" name="Enviar" value="Enviar">
+                <label for="texto">Ingrese su pregunta: </label>
+                <div class="contenedor-formulario__form-textarea" name="texto">
+                    <textarea class="contenedor-formulario__form-textarea-campo" name="campo" placeholder="ingrese su pregunta"></textarea>
                 </div>
+                <button class="contenedor-formulario__form-boton" type="submit">Enviar</button>
             </form>
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="contact">
-              <h2 class="contact__titulo">Redes Sociales</h2>
-              <div class="contact__app">
-                  <a class="contact__link" href="#">
-                       <img class="contact__link-imagen" src="../img/iconos/facebook.png" alt="facebook">
+         </div>
+     </main>
+     <footer class="footer">
+        <div class="footer__redes">
+             <h2 class="footer__redes-titulo">Redes Sociales</h2>
+             <div class="footer__redes-apps">
+                  <a class="footer__redes-apps-link" href="#">
+                       <img class="footer__redes-apps-link-imagen" src="../img/iconos/facebook.png" alt="facebook">
                   </a>
-                  <a class="contact__link" href="#">
-                       <img class="contact__link-imagen" src="../img/iconos/instagram.png" alt="instagram">
+                  <a class="footer__redes-apps-link" href="#">
+                       <img class="footer__redes-apps-link-imagen" src="../img/iconos/instagram.png" alt="facebook">
                   </a>
-                  <a class="contact__link" href="#">
-                       <img class="contact__link-imagen" src="../img/iconos/twitter.png" alt="twitter">
+                  <a class="footer__redes-apps-link" href="#">
+                       <img class="footer__redes-apps-link-imagen" src="../img/iconos/twitter.png" alt="facebook">
                   </a>
-                  <a class="contact__link" href="#">
-                       <img class="contact__link-imagen" src="../img/iconos/youtube.png" alt="youtube">
+                  <a class="footer__redes-apps-link" href="#">
+                       <img class="footer__redes-apps-link-imagen" src="../img/iconos/youtube.png" alt="facebook">
                   </a>
-              </div>
-        </div>
-        <div class="nosotros">
-             <h2 class="nosotros__titulo">acerca de nosotros</h2>
-             <p class="nosotros__parrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate tempore ad corrupti velit consequuntur doloremque aut sed consectetur ipsa molestiae.</p>
-        </div>
-        <div class="number">
-             <div class="number__iconos">
-                  <img class="number__iconos-imagen" src="../img/iconos/gmail.png" alt="gmail">
-                  <p class="number__iconos-texto">example@gmail.com</p>
-             </div>
-             <div class="number__iconos">
-                  <img class="number__iconos-imagen" src="../img/iconos/whatsapp.png" alt="whatsapp">
-                  <p class="number__iconos-texto">000-3232-9999</p>
-             </div>
-             <div class="number__iconos">
-                  <img class="number__iconos-imagen" src="../img/iconos/google-map.png" alt="map">
-                  <p class="number__iconos-texto">los cardales</p>
              </div>
         </div>
-        <iframe class="footer__mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26358.762090247274!2d-59.00365457082109!3d-34.32895991360937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb7be81ba76321%3A0x25b7697792446dd3!2sLos%20Cardales%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1655510048071!5m2!1ses-419!2sar"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <h3 class="footer__pie">INFINITY 2021-2022</h3>
-  </footer>
+        <div class="footer__nosotros">
+             <h2 class="footer__nosotros-titulo">Acerca de nosotros</h2>
+             <p class="footer__nosotros-parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur blanditiis labore pariatur impedit! Hic consequatur veniam a ipsam ab nostrum?</p>
+        </div>
+        <div class="footer__contactos">
+             <div class="footer__contactos-contenedor">
+                  <img class="footer__contactos-contenedor-imagen" src="../img/iconos/whatsapp.png" alt="whatsapp">
+                  <p class="footer__contactos-contenedor-parrafo">Lorem ipsum dolor sit.</p>
+             </div>
+             <div class="footer__contactos-contenedor">
+                  <img class="footer__contactos-contenedor-imagen" src="../img/iconos/gmail.png" alt="gmail">
+                  <p class="footer__contactos-contenedor-parrafo">Lorem ipsum dolor sit.</p>
+             </div>
+             <div class="footer__contactos-contenedor">
+                  <img class="footer__contactos-contenedor-imagen" src="../img/iconos/google-map.png" alt="map">
+                  <p class="footer__contactos-contenedor-parrafo">Lorem ipsum dolor sit.</p>
+             </div>
+        </div>
+        <div class="footer__mapa">
+             <iframe class="footer__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13179.37528235368!2d-58.986144949999996!3d-34.3289966!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb7be81ba76321%3A0x25b7697792446dd3!2sLos%20Cardales%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1656633160076!5m2!1ses-419!2sar" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <h2 class="footer__titulo">INFINITY 2021-2022</h2>
+   </footer>
 </body>
-</html> <!-- desafio sass -->
+</html>

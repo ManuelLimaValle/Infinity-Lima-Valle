@@ -1,0 +1,17 @@
+.section-cuatro{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,65vh);
+    gap:20px;
+    &__juegos{
+        width: 100%;
+        &-texto{
+            height: 20%;
+        }
+        &-imagen{
+            width: 100%;
+            height: 80%;
+        }
+    }
+}
