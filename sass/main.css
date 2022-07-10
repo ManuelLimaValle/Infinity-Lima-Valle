@@ -352,7 +352,7 @@
   grid-template-columns: repeat(2, 40%);
   grid-template-rows: repeat(2, 30vh);
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   gap: 10px;
 }
 .contenedor-categorias__juegos {
@@ -363,6 +363,19 @@
   width: 100%;
   height: 70%;
 }
+.contenedor-categorias .contenedor-categorias__juegos--azul {
+  background-color: blue;
+}
+.contenedor-categorias .contenedor-categorias__juegos--rojo {
+  background-color: red;
+}
+.contenedor-categorias .contenedor-categorias__juegos--verde {
+  background-color: green;
+}
+.contenedor-categorias .contenedor-categorias__juegos--amarillo {
+  background-color: yellow;
+}
+
 .section-play {
   width: 90%;
   height: 250vh;

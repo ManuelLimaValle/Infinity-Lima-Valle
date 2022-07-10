@@ -21,12 +21,12 @@ $colores:(
     azul:blue,
     rojo:red,
     verde:green,
-    ammarillo:yellow
+    amarillo:yellow
 );
 
 .contenedor-categorias{
      @include medidasIguales(2,2,40%,30vh);
-     @include size(100%,60vh);
+     @include size(100%,70vh);
      gap:10px;
      &__juegos{
         @include size(100%,100%);
@@ -35,8 +35,8 @@ $colores:(
 
         }
     }
-    @each $color,$pintura in colores {
-        &__juegos--#{$color}{
+    @each $colors, $pintura in $colores {
+        .contenedor-categorias__juegos--#{$colors}{
              background-color: $pintura;
         }
     }
