@@ -1,4 +1,13 @@
 //Index
+@mixin medidasIguales($columnas,$filas,$ancho,$alto) {
+    display:grid;
+    grid-template-columns: repeat($columnas,$ancho) ;
+    grid-template-rows: repeat($filas,$alto);
+}
+@mixin size($ancho,$alto) {
+    width:$ancho;
+    height:$alto;
+}
 #todo{
     display:grid;
     grid-template-columns: 1fr;
@@ -15,7 +24,13 @@
 //Contactos
 @import "contactos/contenedorUno";
 
-//
+//juegos
+@import "juegos/sectionPlayStation";
+
+//ofertas
+
+
+
 
 @media screen and (min-width: 1200px){
     .header{
@@ -156,6 +171,43 @@
     }
    .contenedor-formulario{
         width:30%;
+   }
+   //juegos
+   .section-play{
+        @include medidasIguales(2,3,50%,65vh);
+        grid-template-areas:
+        "uno dos"
+        "uno tres"
+        "cuatro tres"
+        ;
+        grid-column-gap: 10px;
+        &__juego{
+           
+            &-imagen--tamanio{
+                display: block;
+                position: relative;
+                left: 30%;
+                @include size(70%,100%);
+                
+            }
+            &-texto--display{
+                 position:relative;
+                 bottom:100%;
+                 @include size(30%,100%);
+            } 
+        }
+        &__juego--gridUno{
+            grid-area: uno;
+        }
+        &__juego--gridDos{
+            grid-area: dos;
+        }
+        &__juego--gridTres{
+            grid-area: tres;
+        }
+        &__juego--gridCuatro{
+            grid-area: cuatro;
+        }
    }
 }
 

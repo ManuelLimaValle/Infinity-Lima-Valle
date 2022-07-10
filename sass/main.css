@@ -347,6 +347,80 @@
   border: none;
 }
 
+.contenedor-categorias {
+  display: grid;
+  grid-template-columns: repeat(2, 40%);
+  grid-template-rows: repeat(2, 30vh);
+  width: 100%;
+  height: 60vh;
+  gap: 10px;
+}
+.contenedor-categorias__juegos {
+  width: 100%;
+  height: 100%;
+}
+.contenedor-categorias__juegos-imagen {
+  width: 100%;
+  height: 70%;
+}
+.section-play {
+  width: 90%;
+  height: 250vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: repeat(4, 60vh);
+  grid-row-gap: 10px;
+}
+.section-play__juego {
+  width: 100%;
+  height: 100%;
+  background-color: #0000FF;
+}
+.section-play__juego-imagen {
+  width: 100%;
+  height: 80%;
+}
+.section-play__juego-texto {
+  width: 100%;
+  height: 20%;
+}
+
+.contenedor-varios {
+  width: 100%;
+  height: 130vh;
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  grid-template-rows: repeat(4, 30vh);
+  justify-content: space-evenly;
+}
+.contenedor-varios__juego-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+.contenedor-varios__juego-link-imagen {
+  width: 100%;
+  height: 80%;
+  border-radius: 5px;
+}
+
+.contenedor-xbox {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+.contenedor-xbox__juegos {
+  width: 100%;
+  height: 40vh;
+}
+.contenedor-xbox__juegos-imagen {
+  width: 100%;
+  height: 80%;
+}
+
 @media screen and (min-width: 1200px) {
   .header {
     grid-template-columns: repeat(11, 1fr);
@@ -488,5 +562,38 @@
 
   .contenedor-formulario {
     width: 30%;
+  }
+
+  .section-play {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(3, 65vh);
+    grid-template-areas: "uno dos" "uno tres" "cuatro tres";
+    grid-column-gap: 10px;
+  }
+  .section-play__juego-imagen--tamanio {
+    display: block;
+    position: relative;
+    left: 30%;
+    width: 70%;
+    height: 100%;
+  }
+  .section-play__juego-texto--display {
+    position: relative;
+    bottom: 100%;
+    width: 30%;
+    height: 100%;
+  }
+  .section-play__juego--gridUno {
+    grid-area: uno;
+  }
+  .section-play__juego--gridDos {
+    grid-area: dos;
+  }
+  .section-play__juego--gridTres {
+    grid-area: tres;
+  }
+  .section-play__juego--gridCuatro {
+    grid-area: cuatro;
   }
 }/*# sourceMappingURL=main.css.map */
