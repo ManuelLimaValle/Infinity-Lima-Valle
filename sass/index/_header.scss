@@ -5,7 +5,7 @@
 
 .header{
     @include size(100%,100vh);
-    background-image: url(../../img/portadas/Elden-Ring.jpg);
+    background-image: url(/Infinity-Repo-Lima-Valle/img/portadas/Elden-Ring.jpg);
     background-size: cover;
     background-position:center;
     &__nav{
