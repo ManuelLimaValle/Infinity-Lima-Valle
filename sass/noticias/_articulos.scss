@@ -1,0 +1,75 @@
+#main{
+.contenedor{
+    @include size(95%,600vh);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh repeat(9,45vh);
+    align-items: center;
+    margin:0 auto;
+    &__titulo{
+        text-align: center;
+    }
+    &__article{
+        display:grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 20vh 15vh 10vh;
+        grid-template-areas: 
+        "imagen cabeza"
+        "imagen parrafo"
+        "imagen footer"
+        ;
+        border-bottom:solid 1px #d3d3d3;
+        &-header{
+            grid-area: cabeza;
+            font-size: 0.6rem;
+            &-link{
+                color:#000000;
+                font-weight: bold;
+               
+            }
+            &-link:hover{
+                text-decoration: underline;
+            }
+        }
+        &-header:nth-child(1){
+            align-self: end;
+        }
+        &-link{
+            grid-area: imagen;
+            @include size(85%,40%);
+            &-imagen{
+                @include size(100%,100%);
+            }
+        }
+        &-link:nth-child(2){
+            align-self:center;
+            justify-self: center;
+        }
+        &-parrafo{
+            grid-area: parrafo;
+            font-size: 0.8rem;
+        }
+        &-parrafo:nth-child(3){
+            align-self: center;
+        }
+        &-footer{
+            grid-area: footer;
+            font-size: 0.7rem;
+            &-parrafo{
+                width: 70%;
+                display: inline-block;
+            }
+        }
+    }
+    &__publicidad{
+        @include size(70%,90%);
+        margin:0 auto;
+        &-imagen{
+            @include size(100%,100%);
+        }
+    }
+}
+.aside{
+    display: none;
+}
+}

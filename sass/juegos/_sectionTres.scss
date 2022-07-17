@@ -1,0 +1,91 @@
+.section-juegosTres{
+    @include size(100%,800vh);
+    &__resident{
+        @include size(100%,300vh);
+        background: linear-gradient(to top,#400080 10%,#000000 50%);
+        &-contenedor{
+            @include size(100%,15%);
+            margin: 0 auto;
+            &-imagen{
+                @include size(100%,100%);
+            }
+            &-texto{
+                color:#ffffff;
+                font-family: 'Oswald', sans-serif;
+                position: relative;
+                bottom:90px;
+                text-align: center;
+                &-titulo{
+                    font-size:40px;
+                    color: #ff0000;
+                }
+            }
+            &-juegos{
+                @include size(100%,80%);
+                display: flex;
+                justify-content:space-evenly;
+                &-espacio{
+                    @include size(45%,55vh);
+                    transition: all 0.5s;
+                    &-link{
+                        color:#ff0000;
+                        @include size(100%,100%);
+                        &-imagen{
+                            @include size(100%,86%);
+                            box-shadow: 0 0 10px;
+                        }
+                    }
+                }
+                &-espacio:hover{
+                    transform:scale(1.1,1.1);
+                }
+            }
+        }
+        &-contenedor-juegos{
+            display: flex;
+            flex-flow: row wrap;
+            &-imagen{
+                @include size(20%,20vh);
+            }
+        }
+    }
+    &__assasins{
+        @include size(100%,280vh);
+        background-color: #000000;
+        display:flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-content: center;
+        
+        &-contenedor{
+            @include size(46%,55vh);
+            transition: all 0.5s;
+            
+            &-link{
+                color: #ffffff;
+                @include size(100%,100%);
+                &-imagen{
+                    @include size(100%,80%);
+                    box-shadow: 0 0 10px; 
+                }
+                &-texto{
+                    color:#ffffff;
+                }
+            }
+        }
+        &-contenedor:hover{
+            transform: scale(1.1,1.1);
+        }
+        &-contenedor--tamanio{
+            @include size(46%,44vh);
+            border:solid 2px #ffffff;
+            .section-juegosTres__assasins-contenedor-imagen{
+                position: relative;
+                background-color: #ffffff;
+                top:70px;
+                left:35px;
+            }
+        }
+    }
+    
+}

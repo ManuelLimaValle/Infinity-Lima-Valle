@@ -1,0 +1,44 @@
+.header--imagen{
+    background-image: url(../../img/portadas/fondo-ofertas.jpg);
+        .header__titulo{
+            @include size(100%,100%);
+            &-oferta{
+                @include size(100%,20vh);
+                &-titulo{
+                    @include size(60%,10vh);
+                    font-size: 3rem;
+                    padding-bottom: 65px;
+                    background-color: #fb00fb;
+                    transform: skewy(-10deg);
+                    box-shadow: 0 0 10px;
+                    text-align: center;
+                    color:#ffffff;
+                    margin: 0 auto;
+                }
+                &-parrafo{
+                    display: block;
+                    margin: 0 auto;
+                    font-weight: bold;
+                    @include size(50%,5vh);
+                    text-align: center;
+                    transform: skewy(-10deg);
+                    color:#fb00fb ;
+                    box-shadow: 0 0 10px;
+                    background-color:#ffffff; 
+                    position: relative;
+                    bottom: 80px;
+                    right:30px;
+                }
+            }
+            &-imagenes{
+                @include size(100%,35%);
+                display: flex;
+                justify-content:space-evenly;
+                
+                &-items{
+                    @include size(32%,80%);
+                    box-shadow:20px 20px 100px #fb00fb;
+                }
+            }
+        }    
+}

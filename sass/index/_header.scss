@@ -1,0 +1,126 @@
+@mixin size($ancho,$alto){
+    width: $ancho;
+    height: $alto;
+}
+
+.header{
+    @include size(100%,100vh);
+    background-image: url(../../img/portadas/Elden-Ring.jpg);
+    background-size: cover;
+    background-position:center;
+    &__nav{
+        @include size(100%,10vh);
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position:sticky;
+        top:0px;
+        z-index: 10;
+        background-color: #000000;
+        &-logo{ 
+            display: block;
+            margin-left: 10px;
+            @include size(35%,60%);
+            &-imagen{
+                @include size(100%,100%);
+            }
+        }
+        &-hamburguesa{
+            &-imagen{
+                color: #00dd00;
+                font-size: 30px;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+        }
+        &-lista{
+            position:fixed;
+            opacity: 0.9;
+            width:100%;
+            height: 0vh;
+            top:10%;
+            background-color: #000000;
+            transition: all .5s;
+            z-index: 4;
+            &-items{
+                display: none;
+                text-align: center;
+                margin: 50px 0px;
+                &-link{
+                    font-size: 20px;
+                    font-weight:900;
+                    color: #00dd00;
+                    text-transform: uppercase;
+                }
+                &-link:hover{
+                    border-bottom: 2px solid #00dd00;
+                }
+                &-buscador{
+                    height:4vh;
+                    width:100%;
+                    display:flex;
+                    justify-content: center;
+                    &-espacio{
+                        @include size(40%,100%);
+                        margin-left: 35px;
+                        border-radius: 20px;
+                        border: none;
+                    }
+                    &-espacio::placeholder{
+                        text-align:center;
+                    }
+                    &-lupa{
+                        @include size(7%,100%);
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        &-check{
+            display: none;
+        }
+        &-check:checked ~ &-lista{
+            height: 100vh;
+        }
+        &-check:checked ~ &-lista &-lista-items{
+            display: block;
+
+        }
+    }
+    &__titulo{
+        @include size(90%,70vh);
+        margin:0 auto;
+        position: relative;
+        top:80px;
+        &-imagen{
+            @include size(100%,13%);
+        }
+        &-h{
+            text-align: center;
+            padding: 0 40px;
+            @include size(100%,30%);
+            color: #007900;
+        }
+        &-parrafo{
+            margin-top: 10px;
+            font-size: 15px;
+            text-align: center;
+        }
+        &-link{
+            display:block;
+            background-color:#00dd00;
+            padding: 5px 5px;
+            width:40%;
+            margin: 0 auto;
+            position: relative;
+            top:130px;
+            color:#000000;
+            text-align:center;
+            font-weight:bold;
+            &-icon{
+                margin-left:5px;
+            }
+        }
+    }
+}

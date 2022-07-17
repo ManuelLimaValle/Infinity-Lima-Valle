@@ -1,0 +1,32 @@
+.section-juegosCuatro{
+    @include size(100%,300vh);
+    &__contenedor{
+        @include size(100%,70vh);
+        background-image: url(../../img/portadas/playstation.png);
+        background-size: cover;
+        &-juegos{
+            @include size(100%,70%);
+            &-imagen{
+                @include size(10%,100%);
+                background-color:blue;
+            }
+            &-imagen--tamanioUno{
+                position: absolute;
+                @include size(50%,50%);
+            }
+            &-imagen--tamanioDos{
+                @include size(50%,100%);
+                position: relative;
+                left: 90px;
+            }
+            &-imagen--tamanioTres{
+                position: relative;
+                right: 20px;
+            }
+            &-imagen--tamanioCuatro{
+                position: relative;
+                right: 20px;
+            }
+        }
+    }
+}

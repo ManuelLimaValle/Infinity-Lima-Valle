@@ -1,0 +1,49 @@
+.contenedor-formulario{
+    font-family: 'Oswald', sans-serif;
+    @include size(90%,100vh);
+    margin: 0 auto;
+    &__form{
+        @include size(100%,90%);
+        font-size: 0.9rem;
+        margin-top: 20px;
+        &-texto{
+            @include size(100%,4vh);
+            margin: 7px 0px;
+            &-input{
+                @include size(100%,100%);
+                border: none;
+                border-bottom: solid 1px #2dff2d;
+            }
+        }
+        &-radio{
+            @include size(100%,5vh);
+            margin: 10px 0px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+        &-lista{
+            margin: 10px 0px;
+        }
+        &-textarea{
+            @include size(100%,20vh);
+            margin: 20px 0px;
+            &-campo{
+                @include size(100%,100%);
+            }
+        }
+        &-boton{
+            @include size(70%,6vh);
+            display: block;
+            margin: 0 auto;
+            border-radius: 20px;
+            border:none;
+            background-color: #2dff2d;
+        }
+        &-boton:hover{
+            border: solid 1px #000000;
+        }
+    }
+}

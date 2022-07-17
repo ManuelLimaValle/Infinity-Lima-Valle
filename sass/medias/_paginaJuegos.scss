@@ -1,0 +1,48 @@
+.section-juegosUno{
+    @include size(100%,80vh);
+    &__contenedor{
+        @include size(100%,60vh);
+        &-genero{
+            @include size(21%,25vh);
+        }
+        &-genero::before{
+            @include size(21%,25vh)
+        }
+    }
+}
+
+.section-juegosDos{
+    &__publicidad{
+        &-juego--imagenTres{
+            display: block;
+        }
+        &-juego--imagenCuatro{
+            display: block;
+        }
+    }
+}
+
+.section-juegosTres{
+    &__resident{
+        @include size(100%,190vh);
+        &-contenedor{
+            @include size(100%,35%);
+            &-juegos{
+                margin-top: 50px;
+                @include size(100%,60%);
+                &-espacio{
+                    @include size(21%, 55vh);
+                }
+            }
+        }
+    }
+    &__assasins{
+        @include size(100%,200vh);
+        &-contenedor{
+            @include size(21%,55vh);
+        }
+        &-contenedor--tamanio{
+            @include size(21%,44vh);
+        }
+    }
+ }

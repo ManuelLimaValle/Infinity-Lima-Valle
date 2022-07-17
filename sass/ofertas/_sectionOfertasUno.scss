@@ -1,0 +1,62 @@
+.section-ofertasUno{
+    @include size(100%,80vh);
+    background-color:#000000;
+    &__arriba{
+        @include size(100%,35vh);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        &-imagen{
+            @include size(50%,100%);
+        }
+    }
+    &__medio{
+        @include size(100%,35vh);
+        
+        display: flex;
+        flex-flow: row wrap;
+        justify-content:center;
+        position: relative;
+        bottom:197px;
+        &-figura{
+            @include size(30%,100%);
+            background-color:red;
+            transform: skewX(-8deg);
+            background-image: url(../../img/juegos/bob.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        &-figura--imagenDos{
+           background-image: url(../../img/juegos/star.jpg);
+           display:none
+        }
+        &-figura--imagenTres{
+            background-image: url(../../img/juegos/horizon.jpg);
+        }
+        &-figura--imagenCuatro{
+            background-image: url(../../img/juegos/follout.jpg);
+            display:none;
+        }
+    }
+    &__bajo{
+        @include size(100%,30vh);
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        position: relative;
+        bottom:240px;
+        &-imagen{
+            @include size(30%,100%);
+            box-shadow:20px 20px 100px #06ff45;
+        }
+    }
+    &__titulo{
+        color: #ffff00;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-size:1.5rem;
+        position: relative;
+        bottom:160px;
+        text-align: center;
+    }
+}

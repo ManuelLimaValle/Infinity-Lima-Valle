@@ -1,0 +1,27 @@
+#main{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 600vh;
+    justify-items: center;
+    grid-template-areas: 
+    "articulos aside"
+    ;
+   .contenedor{
+        grid-area: articulos;
+        &__publicidad{
+            @include size(35%,90%);
+        }
+   }
+   .aside{
+       display: block;
+       @include size(80%,100%);
+       grid-area:aside;
+       &__contenedor{
+        @include size(100%,120vh);
+        margin-top: 20px ;
+         &-imagen{
+            @include size(100%,100%);
+         }
+       }
+   }
+}

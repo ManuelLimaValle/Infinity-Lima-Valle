@@ -1,0 +1,196 @@
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    font-family: 'Encode Sans SC', sans-serif;
+    box-sizing: border-box;
+}
+@mixin size($ancho,$alto){
+    width: $ancho;
+    height: $alto;
+}
+
+@import "index/header";
+@import "index/secciones";
+//juegos
+@import "juegos/sectionUno";
+@import "juegos/sectionDos";
+@import "juegos/sectionTres";
+@import "juegos/sectionCuatro";
+//ofertas
+@import "ofertas/header";
+@import "ofertas/sectionOfertasUno";
+//noticias
+@import "noticias/headerNoticias";
+@import "noticias/articulos";
+//contactos
+@import "contactos/formulario";
+
+
+@media screen and (min-width:768px){
+    .header{
+        &__nav{
+            
+            @include size(100%,8vh);
+            &-logo{
+                @include size(12%,70%);
+                margin-left: 15px;
+            }
+            
+            &-lista{
+                position: relative;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content:space-evenly;
+                top:0px;
+                align-items: center;
+                background-color: transparent;
+                transition: all 0s;
+                @include size(60%,100%);
+                &-items{
+                    display: block;
+                    margin: 0px 0px;
+                    &-link{
+                        font-size:20px;
+                    }
+                    &-buscador{
+                        &-espacio{
+                            @include size(60%,100%);
+                        }
+                        &-lupa{
+                            @include size(10%,100%);
+                        }
+                    }
+                }
+
+            }
+            &-hamburguesa{
+                display: none;
+            }
+            &-check:checked ~ &-lista &-lista-items{
+                display: none;
+    
+            }
+        }
+        &__titulo{
+            position: relative;
+            right:420px;
+            top:250px;
+            @include size(30%,40vh);
+            &-imagen{
+                @include size(60%,13%);
+                display: block;
+                margin: 0 auto;
+            }
+            &-parrafo{
+                margin-top:0px;
+            }
+            &-link{
+                top:30px;
+            }
+        }
+    }
+    .section{
+        @include size(100%,140vh);
+        justify-content: space-evenly;
+        align-items: center;
+        flex-flow: row nowrap;
+        &__contenedor{
+            @include size(30%,120vh);
+        }
+    }
+    .section-dos{
+        &__consola{
+            &-link{
+                @include size(7%,100%)
+            }
+        }
+    }
+    .section-tres{
+        &__contenedor{
+                @include grillas(4,2,1fr,45vh);
+                grid-template-areas:
+                "uno uno dos tres"
+                "uno uno cuatro cinco"
+                ;
+                gap:0px;
+            }
+    }
+    .section-cuatro{
+        @include size(100%,100vh);
+        &__lanzamiento{
+            margin-top: 70px;
+            @include size(90%,60vh);
+            @include grillas(5,2,1fr,20vh);
+        }
+    }
+    .section-cinco{
+        @include size(100%,220vh);
+        @include grillas(2,3,45%,70vh);
+        align-content: center;
+        justify-content: center;
+        &__juegos{
+            &-texto{
+                background-color:transparent;
+            }
+        }
+        &__juegos--posicionUno{
+            grid-row:1/3;
+        }
+        &__juegos--posicionDos{
+            grid-row:2/4;
+        }
+    }
+    .section-seis{
+        gap:0px;
+    }
+    .footer{
+        @include size(100%,70vh);
+        grid-template-columns: repeat(4,24%);
+        grid-template-rows: 50vh 10vh;
+        align-content:flex-end;
+        grid-row-gap: 20px;
+        &__uno{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content:center;
+            &-imagen{
+                @include size(55%,15%);
+            }
+        }
+        &__cuatro{
+            grid-column: 4/5;
+            grid-row:1/2;
+        }
+        &__cinco{
+            grid-column:1/5;
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            border-top: 1px solid #ffffff;
+            &-redes{
+                margin-top: 0px;
+                position: relative;
+                left:80%;
+                align-items: center;
+                @include size(20%,100%);
+                &-link{
+                    font-size:30px;
+                }
+            }
+            &-texto{
+                position: relative;
+                right: 15%;
+               margin-top:0px;
+               padding-top: 0px;
+               border-top: none;
+            }
+        }
+    }
+    //juegos
+    @import "medias/paginaJuegos";
+    //pie de pagina
+    @import "medias/pieDePagina";
+    @import "medias/paginaNoticias";
+
+}
