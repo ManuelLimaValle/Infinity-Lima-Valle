@@ -1,5 +1,5 @@
 .header--imagen{
-    background-image: url(/Infinity-Repo-Lima-Valle/img/portadas/fondo-ofertas.jpg);/*no funciona*/
+    background-image: url(../../img/portadas/fondo-ofertas.jpg);/*no funciona*/
         .header__titulo{
             @include size(100%,100%);
             &-oferta{

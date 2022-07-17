@@ -14,7 +14,7 @@
             display: inline-block;
             background-color: red;
             transform: skewx(-5deg);
-            background-image: url(/Infinity-Repo-Lima-Valle/img/portadas/land.jpg);
+            background-image: url(../../img/portadas/land.jpg);
             background-position: center;
             background-size:cover;
             
@@ -27,10 +27,10 @@
             opacity: 0.8;
         }
         &-juego--imagenUno{
-            background-image: url(/Infinity-Repo-Lima-Valle/img/portadas/halo.jpg);
+            background-image: url(../../img/portadas/halo.jpg);
         }
         &-juego--imagenDos{
-            background-image: url(/Infinity-Repo-Lima-Valle/img/portadas/witcher.jpg);
+            background-image: url(../../img/portadas/witcher.jpg);
         }
         &-juego--imagenTres{
             display: none;
