@@ -97,24 +97,30 @@
         flex-flow: row nowrap;
         &__contenedor{
             @include size(30%,120vh);
+            
         }
     }
     .section-dos{
         &__consola{
             &-link{
-                @include size(7%,100%)
+                @include size(7%,100%);
             }
         }
     }
     .section-tres{
-        &__contenedor{
-                @include grillas(4,2,1fr,45vh);
-                grid-template-areas:
-                "uno uno dos tres"
-                "uno uno cuatro cinco"
-                ;
-                gap:0px;
+        @include size(100%,100vh);
+        &__collage{
+            @include size(100%,80vh);
+            &-imagen{
+                @include size(19%,100%);
+                &--violeta{
+                    display: block;
+                }
+                &--amarillo{
+                    display: block;
+                }
             }
+        }
     }
     .section-cuatro{
         @include size(100%,100vh);
@@ -122,6 +128,9 @@
             margin-top: 70px;
             @include size(90%,60vh);
             @include grillas(5,2,1fr,20vh);
+            &-juego{
+                @include size(80%,100%);
+            }
         }
     }
     .section-cinco{

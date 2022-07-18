@@ -20,9 +20,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
+  position: fixed;
   z-index: 10;
   background-color: #000000;
 }
@@ -47,7 +45,7 @@
   opacity: 0.9;
   width: 100%;
   height: 0vh;
-  top: 10%;
+  top: 9%;
   background-color: #000000;
   transition: all 0.5s;
   z-index: 4;
@@ -143,36 +141,50 @@
 
 .section {
   width: 100%;
-  height: 370vh;
+  height: 390vh;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-content: center;
+  align-content: space-around;
 }
 .section__contenedor {
   width: 90%;
   height: 120vh;
+  box-shadow: 0 0 10px;
 }
 .section__contenedor-imagen {
   width: 100%;
   height: 85%;
 }
+.section__contenedor-texto {
+  text-align: center;
+  margin-top: 20px;
+}
+.section__contenedor-texto-link {
+  color: #000000;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 6px;
+  border-radius: 10px;
+  background-color: #00dd00;
+}
 
 .section-dos {
   width: 100%;
-  height: 20vh;
+  height: 40vh;
 }
 .section-dos__titulo {
   text-align: center;
+  font-size: 1.5em;
   width: 100%;
-  height: 20%;
+  height: 30%;
 }
 .section-dos__consola {
   display: flex;
   justify-content: space-evenly;
   margin-top: 20px;
   width: 100%;
-  height: 60%;
+  height: 30%;
 }
 .section-dos__consola-link {
   display: inline-block;
@@ -183,42 +195,57 @@
   width: 100%;
   height: 100%;
 }
+.section-dos__consola-link:hover {
+  background-color: #00dd00;
+  padding: 7px 7px;
+  border-radius: 20px;
+}
 
+.section-tres {
+  width: 100%;
+  height: 70vh;
+}
 .section-tres__titulo {
+  color: #ffffff;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
   text-align: center;
+  color: #ffff0f;
+  padding-top: 20px;
 }
-.section-tres__contenedor {
+.section-tres__collage {
   width: 100%;
-  height: 180vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 35vh);
-  gap: 5px;
-  grid-template-areas: "uno uno" "uno uno" "dos tres" "cuatro cinco";
-  align-content: center;
+  height: 40vh;
+  background-color: #000000;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 50px;
+  justify-content: space-evenly;
 }
-.section-tres__contenedor-juego {
-  width: 100%;
+.section-tres__collage-imagen {
+  width: 32%;
   height: 100%;
+  box-shadow: 0 0 10px;
+  color: #ff0000;
 }
-.section-tres__contenedor-juego-imagen {
-  width: 100%;
-  height: 100%;
+.section-tres__collage-imagen--verde {
+  color: #15ff50;
 }
-.section-tres__contenedor-juego--areaUno {
-  grid-area: uno;
+.section-tres__collage-imagen--azul {
+  color: #0f0fff;
 }
-.section-tres__contenedor-juego--areaDos {
-  grid-area: dos;
+.section-tres__collage-imagen--amarillo {
+  color: #ffff0f;
 }
-.section-tres__contenedor-juego--areaTres {
-  grid-area: tres;
+.section-tres__collage-imagen--violeta {
+  color: #ae00ae;
 }
-.section-tres__contenedor-juego--areaCuatro {
-  grid-area: cuatro;
+.section-tres__collage-imagen--violeta {
+  display: none;
 }
-.section-tres__contenedor-juego--areaCinco {
-  grid-area: cinco;
+.section-tres__collage-imagen--amarillo {
+  display: none;
 }
 
 .section-cuatro {
@@ -238,12 +265,13 @@
   align-content: space-between;
 }
 .section-cuatro__lanzamiento-juego {
-  width: 100%;
+  width: 90%;
   height: 100%;
 }
 .section-cuatro__lanzamiento-juego-imagen {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 .section-cuatro__lanzamiento-juego-titulo {
   text-align: center;
@@ -251,6 +279,9 @@
 .section-cuatro__lanzamiento-juego-link {
   text-align: center;
   color: green;
+}
+.section-cuatro__lanzamiento-juego:hover {
+  transform: scale(1.1, 1.1);
 }
 
 .section-cinco {
@@ -948,12 +979,23 @@
     width: 7%;
     height: 100%;
   }
-  .section-tres__contenedor {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 45vh);
-    grid-template-areas: "uno uno dos tres" "uno uno cuatro cinco";
-    gap: 0px;
+  .section-tres {
+    width: 100%;
+    height: 100vh;
+  }
+  .section-tres__collage {
+    width: 100%;
+    height: 80vh;
+  }
+  .section-tres__collage-imagen {
+    width: 19%;
+    height: 100%;
+  }
+  .section-tres__collage-imagen--violeta {
+    display: block;
+  }
+  .section-tres__collage-imagen--amarillo {
+    display: block;
   }
   .section-cuatro {
     width: 100%;
@@ -966,6 +1008,10 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 20vh);
+  }
+  .section-cuatro__lanzamiento-juego {
+    width: 80%;
+    height: 100%;
   }
   .section-cinco {
     width: 100%;
