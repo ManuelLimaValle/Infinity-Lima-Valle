@@ -85,7 +85,6 @@ $color:(
     }
     &__collage{
         @include size(100%,40vh);
-        background-color:#000000;
         display: flex;
         flex-flow: row wrap;
         margin-top: 50px;
@@ -110,7 +109,7 @@ $color:(
 }
 
 .section-cuatro{
-    @include size(100%,230vh);
+    @include size(100%,200vh);
     color: #ffffff;
     background-color: #000000;
     &__lanzamiento{
@@ -140,27 +139,61 @@ $color:(
 }
 
 .section-cinco{
-    @include size(100%,270vh);
-    @include grillas(1,4,100%,60vh);
+    @include size(90%,340vh);
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 100vh 65vh 65vh 100vh;
+    margin: 0 auto;
     gap:10px;
-    align-content:space-between;
+    align-content: center;
     &__juegos{
         @include size(100%,100%);
+        display: flex;
+        flex-flow:column wrap;
+        justify-content: center;
         &-imagen{
-            @include size(100%,100%);
+            @include size(100%,70%);
         }
         &-texto{
             @include size(100%,25%);
-            position: relative;
-            bottom: 50px;
-            background-color: red;
-            color: white;
+            background-color:#008400;
+            color:#ffffff;
+            font-family: 'Oswald', sans-serif;
             text-align: center;
             &-titulo{
-                font-weight:800;
+                font-size: 1.5rem;
+                margin-top:20px;
+            }
+            &-link{
+                color:#ffffff;
+                font-size: 1.1rem;
+                font-weight: bold;
+                margin-top:35px;
+                display:inline-block;
+                &-icon{
+                    margin-left:10px;
+                }
+            }
+            &-link--margin{
+                margin-top:10px;
+               
+            }
+            &-link:hover{
+                color:#8dff1c;
+                text-decoration:underline;
             }
         }
+        &-imagen--tamanio{
+            @include size(100%,50%);
+        }
+        &-texto--tamanio{
+            @include size(100%,40%);
+        }
+        &-texto--gris{
+            background-color:#3a3a3a;
+        }
     }
+
 }
 
 .section-seis{

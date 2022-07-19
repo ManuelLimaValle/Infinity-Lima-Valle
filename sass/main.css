@@ -105,7 +105,8 @@
   height: 70vh;
   margin: 0 auto;
   position: relative;
-  top: 80px;
+  top: 150px;
+  color: #f3f3f3;
 }
 .header__titulo-imagen {
   width: 100%;
@@ -116,7 +117,6 @@
   padding: 0 40px;
   width: 100%;
   height: 30%;
-  color: #007900;
 }
 .header__titulo-parrafo {
   margin-top: 10px;
@@ -137,6 +137,15 @@
 }
 .header__titulo-link-icon {
   margin-left: 5px;
+}
+
+.header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, #000000, transparent);
+  opacity: 0.5;
 }
 
 .section {
@@ -217,7 +226,6 @@
 .section-tres__collage {
   width: 100%;
   height: 40vh;
-  background-color: #000000;
   display: flex;
   flex-flow: row wrap;
   margin-top: 50px;
@@ -250,7 +258,7 @@
 
 .section-cuatro {
   width: 100%;
-  height: 230vh;
+  height: 200vh;
   color: #ffffff;
   background-color: #000000;
 }
@@ -285,33 +293,65 @@
 }
 
 .section-cinco {
-  width: 100%;
-  height: 270vh;
+  width: 90%;
+  height: 340vh;
   display: grid;
-  grid-template-columns: repeat(1, 100%);
-  grid-template-rows: repeat(4, 60vh);
+  grid-template-columns: 100%;
+  grid-template-rows: 100vh 65vh 65vh 100vh;
+  margin: 0 auto;
   gap: 10px;
-  align-content: space-between;
+  align-content: center;
 }
 .section-cinco__juegos {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
 }
 .section-cinco__juegos-imagen {
   width: 100%;
-  height: 100%;
+  height: 70%;
 }
 .section-cinco__juegos-texto {
   width: 100%;
   height: 25%;
-  position: relative;
-  bottom: 50px;
-  background-color: red;
-  color: white;
+  background-color: #008400;
+  color: #ffffff;
+  font-family: "Oswald", sans-serif;
   text-align: center;
 }
 .section-cinco__juegos-texto-titulo {
-  font-weight: 800;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+.section-cinco__juegos-texto-link {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 35px;
+  display: inline-block;
+}
+.section-cinco__juegos-texto-link-icon {
+  margin-left: 10px;
+}
+.section-cinco__juegos-texto-link--margin {
+  margin-top: 10px;
+}
+.section-cinco__juegos-texto-link:hover {
+  color: #8dff1c;
+  text-decoration: underline;
+}
+.section-cinco__juegos-imagen--tamanio {
+  width: 100%;
+  height: 50%;
+}
+.section-cinco__juegos-texto--tamanio {
+  width: 100%;
+  height: 40%;
+}
+.section-cinco__juegos-texto--gris {
+  background-color: #3a3a3a;
 }
 
 .section-seis {
@@ -908,7 +948,7 @@
     height: 8vh;
   }
   .header__nav-logo {
-    width: 12%;
+    width: 11%;
     height: 70%;
     margin-left: 15px;
   }
@@ -1010,25 +1050,42 @@
     grid-template-rows: repeat(2, 20vh);
   }
   .section-cuatro__lanzamiento-juego {
-    width: 80%;
+    width: 70%;
     height: 100%;
   }
   .section-cinco {
     width: 100%;
-    height: 220vh;
-    display: grid;
-    grid-template-columns: repeat(2, 45%);
-    grid-template-rows: repeat(3, 70vh);
-    align-content: center;
+    height: 280vh;
+    grid-template-columns: 46% 46%;
+    grid-template-rows: repeat(3, 90vh);
     justify-content: center;
   }
-  .section-cinco__juegos-texto {
-    background-color: transparent;
+  .section-cinco__juegos-imagen {
+    width: 100%;
+    height: 80%;
   }
-  .section-cinco__juegos--posicionUno {
+  .section-cinco__juegos-texto {
+    width: 100%;
+    height: 20%;
+  }
+  .section-cinco__juegos-texto-titulo {
+    margin-top: 70px;
+  }
+  .section-cinco__juegos-imagen--tamanio {
+    width: 100%;
+    height: 70%;
+  }
+  .section-cinco__juegos-texto--tamanio {
+    width: 100%;
+    height: 30%;
+  }
+  .section-cinco__juegos-texto--tamanio .section-cinco__juegos-texto-titulo--margin {
+    margin-top: 40px;
+  }
+  .section-cinco__juegos--gridUno {
     grid-row: 1/3;
   }
-  .section-cinco__juegos--posicionDos {
+  .section-cinco__juegos--gridDos {
     grid-row: 2/4;
   }
   .section-seis {
